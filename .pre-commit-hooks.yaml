@@ -1,0 +1,14 @@
+- id: clang-format
+  name: clang-format
+  description: Run `clang-format` against C/C++ header and source files, assumes a .clang-format file in the project
+  language: conda
+  files: \.(h\+\+|h|hh|hxx|hpp|cuh|c|cc|cpp|cu|c\+\+|cxx|tpp|txx)$
+  args: [--style=file]
+  entry: clang-format -i
+- id: cppcheck
+  name: cppcheck
+  description: Run `cppcheck` against C/C++ header and source files
+  language: conda
+  files: \.(h\+\+|h|hh|hxx|hpp|cuh|c|cc|cpp|cu|c\+\+|cxx|tpp|txx)$
+  args: [--error-exitcode=1]
+  entry: cppcheck

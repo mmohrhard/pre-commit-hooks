@@ -1,0 +1,6 @@
+name: clang-format-hook
+channels:
+  - conda-forge
+dependencies:
+  - clang-tools=11.1.0
+  - cppcheck=2.2
